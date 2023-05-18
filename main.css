@@ -1,0 +1,404 @@
+:root {
+  --blurColor: #770000;
+}
+
+#main {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#main1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+}
+.centerItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.outline {
+  background-color: #ff0000;
+  border: 10px solid #000000;
+  box-shadow: inset 0px 0px 500px 0px var(--blurColor);
+  border-radius: 500px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+.outlineRinnegan{
+  background-color: #876D8F;
+  border: 10px solid #000000;
+  /* box-shadow: inset 0px 0px 500px 0px var(--blurColor); */
+  border-radius: 500px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+.markMainItem {
+  transform: translateY(-50%) rotateZ(50deg);
+}
+.markItem1 {
+  background-color: #000000;
+  height: 46px;
+  width: 51px;
+  border-radius: 100%;
+  transform: scaleX(0.9);
+}
+.markItem2 {
+  height: 50px;
+  width: 50px;
+  border-radius: 1000px;
+  transform: translateY(-50%);
+  box-shadow: -18px 5px 0px 5px black;
+  transform: translate(30%, -28%);
+  border-radius: 50%;
+}
+.blackCircle {
+  background-color: #000000;
+  height: 70px;
+  width: 70px;
+  border-radius: 1000px;
+  box-shadow: 0px 0px 100px 30px var(--blurColor);
+}
+.blackCircleLittle {
+  background-color: #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 1000px;
+  box-shadow: 0px 0px 100px 30px var(--blurColor);
+}
+.markOutline {
+  border: 5px solid black;
+  height: 300px;
+  width: 300px;
+  border-radius: 1000px;
+  align-items: flex-start;
+}
+@keyframes Rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+.markOutline1 {
+  border: 2px solid black;
+  height: 250px;
+  width: 250px;
+  border-radius: 1000px;
+}
+.markOutline2 {
+  border: 2px solid black;
+  height: 370px;
+  width: 370px;
+  border-radius: 1000px;
+}
+.black {
+  background-color: #000000;
+}
+.noBoxShadow {
+  box-shadow: 0px 0px 0px 0px black;
+}
+.markOutlineParent {
+  /* animation: infinite Rotate 2s; */
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+#mask{
+  width: 0vw;
+  height: 0vh;
+  position: absolute;
+  background-color: #000000;
+  opacity: 0;
+}
+@keyframes MaskAni{
+  0%{
+    opacity: 1;
+  }
+  5%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+  }
+  95%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.markMangekyo1Item {
+  height: 350px;
+  width: 350px;
+  border-radius: 1000px 0px 1000px 0px;
+  background-color: #ff0000;
+  transform: scaleX(0.8) rotateZ(-45deg);
+}
+.markMangekyo1Item2 {
+  height: 350px;
+  width: 350px;
+  border-radius: 1000px 0px 1000px 0px;
+  border: 5px solid black;
+  transform: scaleX(0.8) rotateZ(-45deg);
+}
+.z5 {
+  z-index: 5;
+}
+.blackCircleEmpty {
+  height: 50px;
+  width: 50px;
+  border: 150px solid black;
+  border-radius: 1000px;
+}
+.blackCircleBig {
+  height: 80px;
+  width: 80px;
+  background-color: black;
+  border-radius: 1000px;
+  box-shadow: 0px 0px 100px 30px var(--blurColor);
+}
+.markMangekyo2Item {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  transform: translateY(200px);
+}
+.markMangekyo3Item {
+  height: 210px;
+  width: 210px;
+  border-radius: 1000px;
+  background-color: red;
+  transform: translateY(130px);
+}
+.redCircle {
+  background-color: #ff0000;
+  height: 70px;
+  width: 70px;
+  border-radius: 1000px;
+}
+.redCircleBlur {
+  background-color: #ff0000;
+  height: 70px;
+  width: 70px;
+  border-radius: 1000px;
+  box-shadow: 0px 0px 100px 30px black;
+}
+.markMangekyo4Item {
+  height: 250px;
+  width: 250px;
+  border-radius: 0px 0px 1000px 0px;
+  background-color: black;
+  transform: translate(50px, 100px);
+}
+.markMangekyo4Item2 {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  background-color: red;
+  background-image:
+        /* 10% = 126deg = 90 + ( 360 * .1 ) */ linear-gradient(
+      20deg,
+      transparent 50%,
+      black 50%
+    ),
+    linear-gradient(140deg, black 50%, transparent 50%);
+  transform: scaleY(0.5);
+}
+.markMangekyo4Item3 {
+  transform: translate(-75px, 11px) rotateZ(80deg);
+}
+.backBlack {
+  width: 250px;
+  height: 250px;
+  background-color: black;
+}
+.backBlackCircle {
+  width: 300px;
+  height: 300px;
+  border-radius: 1000px;
+  background-color: black;
+}
+
+.markMangekyo5Item {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid black;
+  margin: 2rem;
+  transform: translate(107px, 140px) rotateZ(45deg);
+}
+.markMangekyo6Item {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid black;
+  margin: 2rem;
+  transform: scaleY(2);
+}
+.markMangekyo6Item2 {
+  transform: translate(107px, 140px) rotateZ(145deg);
+}
+.markMangekyo7Item {
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  box-shadow: 50px 10px 0px 0px black;
+  transform: translate(-50px, 100px);
+}
+.markMangekyo7Item2 {
+  height: 500px;
+  width: 500px;
+  border-radius: 100%;
+  box-shadow: 2px -2px 0px 0px black;
+  transform: translate(100px, 130px);
+}
+.markMangekyo7Circle {
+  border: 5px solid black;
+  height: 170px;
+  width: 170px;
+  border-radius: 1000px;
+  align-items: flex-start;
+}
+.markMangekyo8Circle {
+  width: 350px;
+  height: 350px;
+  border: #000000 20px solid;
+  border-radius: 100%;
+}
+.markMangekyo8Item1 {
+  width: 70px;
+  height: 70px;
+  border: #000000 20px solid;
+  transform: translateY(-150px);
+  border-radius: 100px;
+  background-color: red;
+}
+.markMangekyo8Item2 {
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  transform: translate(60px,-130px) rotateZ(30deg);
+}
+.markMangekyo8Item3 {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  transform: translate(109px,-101px) rotateZ(45deg);
+}
+
+.markMangekyo8Item4 {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  transform: translate(150px,-70px) rotateZ(60deg);
+}
+
+.markMangekyo8Item5 {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  transform: translate(170px,-40px) rotateZ(75deg);
+}
+.markMangekyo8Item6 {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  transform: translate(175px,-15px) rotateZ(90deg);
+}
+.markMangekyo8Item7 {
+  width: 250px;
+  height: 200px;
+  background-color: red;
+  border-radius: 100%;
+  border: none;
+  transform: translate(50px, -11px) rotateZ(10deg);
+}
+
+.markMangekyo9Item1 {
+  /* width: 70px;
+  height: 70px;
+  border: #000000 20px solid;
+  transform: translateY(-150px);
+  border-radius: 100px;
+  background-color: red; */
+}
+.markMangekyo9Item2 {
+  width: 170px;
+  height: 305px;
+  border-radius: 100%;
+  background-color: black;
+  transform: translate(0px,-100px) rotateZ(10deg);
+}
+.markMangekyo9Item3 {
+  width: 130px;
+  height: 192px;
+  border-radius: 100%;
+  background-color: red;
+  transform: translate(60px,-160px) rotateZ(-20deg);
+}
+.markMangekyo9Item4 {
+  width: 130px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: red;
+  transform: translate(80px,-124px) rotateZ(-60deg);
+}
+.markMangekyo9Item5 {
+  width: 100px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: red;
+  transform: translate(30px,-170px) rotateZ(0deg);
+}
+
+.markEternal1Item{
+  height: 70px;
+  width:100px;
+  background-color: black;
+  transform: translateY(220px);
+}
+
+.markEternal2Item1{
+  height: 350px;
+  width: 350px;
+  border-radius: 1000px 0px 1000px 0px;
+  background-color: #ff0000;
+  transform: scaleX(0.8) rotateZ(-45deg);
+}
+.markEternal2Item2{
+    height: 350px;
+    width: 350px;
+    border-radius: 1000px 0px 1000px 0px;
+    border: 10px solid black;
+    transform: scaleX(0.8) rotateZ(-45deg);
+}
+.markEternal2Item3{
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 50px solid black;
+  transform:  scaleY(4) translateY(-50%);
+}
+.markEternal2Item4{
+ /* transform: scaleY(3); */
+}

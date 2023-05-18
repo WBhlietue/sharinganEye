@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .rEye{
+        position:absolute;
+        right: 50%;
+        margin-right: 125px;
+      }
+      .lEye{
+        position:absolute;
+        left: 50%;
+        margin-left: 125px;
+      }
+      .center {
+        position: fixed;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+      }
+      .border10 {
+        border: 10px solid black;
+      }
+      .mainEye {
+        width: 500px;
+        height: 500px;
+        border-radius: 400px 0px 400px 0px;
+        transform:  scaleX(1) rotateZ(35deg);
+        background-color: #ff0000;
+        overflow: hidden;
+      }
+      .mainEye2 {
+        width: 500px;
+        height: 500px;
+        border-radius: 400px 0px 400px 0px;
+        transform:  scaleX(-1) rotateZ(215deg);
+        background-color: #ff0000;
+        overflow: hidden;
+      }
+      .eyeOutline {
+        position: fixed;
+        width: 600px;
+        height: 600px;
+        transform: scale(1.2);
+        border-radius: 1000px;
+        background-color: white;
+        overflow: hidden;
+      }
+      .test{
+        width: 1000px;
+        height: 1000px;
+        background-color: yellow;
+        position: absolute;
+      }
+      .upEyeValve{
+        transform: rotateZ(45deg);
+      }
+      .upEyeInner{
+        width: 800px;
+        height: 1000px;
+        background-color: rgb(255, 197, 89);
+        border: 10px black solid;
+        position: absolute;
+        transform: translate(000px, -300px);
+        border-radius: 000%;
+        animation: DownAni 2s infinite linear;
+        animation-delay: 00.5s;
+      }
+      .downEyeValve{
+        transform: rotateZ(45deg);
+      }
+      .downEyeInner{
+        width: 800px;
+        height: 1000px;
+        background-color: rgb(255, 197, 89);
+        border: 10px black solid;
+        position: absolute;
+        transform: translate(600px, -300px);
+        border-radius: 000%;
+        animation: UpAni 2s infinite linear;
+        animation-delay: 00.5s;
+      }
+      .eye{
+        position: relative;
+        margin-left: -50px;
+      }
+      .lll{
+        transform: scale(-1.2, 1.2) translate(100px, -0px);
+      }
+      @keyframes UpAni{
+        0%{
+          border-radius: 0%;
+          transform: translate(-700px, -300px);
+        }
+        30%{
+          border-radius: 0%;
+          transform: translate(-700px, -300px);
+        }
+        50%{
+          border-radius: 100%;
+          transform: translate(000px, -300px);
+        }
+        80%{
+          border-radius: 0%;
+          transform: translate(-700px, -300px);
+        }
+        100%{
+          border-radius: 0%;
+          transform: translate(-700px, -300px);
+        }
+      }
+      @keyframes DownAni{
+        0%{
+          border-radius: 0%;
+          transform: translate(700px, -300px);
+        }
+        30%{
+          border-radius: 0%;
+          transform: translate(700px, -300px);
+        }
+        50%{
+          border-radius: 100%;
+          transform: translate(000px, -300px);
+        }
+        80%{
+          border-radius: 0%;
+          transform: translate(700px, -300px);
+        }
+        100%{
+          border-radius: 0%;
+          transform: translate(700px, -300px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mask"></div>
+    <div class="mainEye2 border10 rEye">
+      <div class="eyeOutline border10 center lll">
+          <div id="main" class="centerItems eye"></div>
+      </div>
+      <div class="upEyeValve">
+        <div class="upEyeInner"></div>
+      </div>
+      </div>
+    </div>
+    <div class="mainEye border10 lEye">
+      <div class="eyeOutline border10 center">
+          <div id="main1" class="centerItems eye"></div>
+      </div>
+      <div class="downEyeValve">
+        <div class="downEyeInner"></div>
+      </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="main2.js"></script>
+    
+  </body>
+</html>
